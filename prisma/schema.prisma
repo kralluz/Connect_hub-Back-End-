@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./src/generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://cunnecthub_user:XJmzbhrr5DuhPR0CJ9Wu9RuVKgFlv7Ri@dpg-cmtup40cmk4c7391fdo0-a.oregon-postgres.render.com/cunnecthub"
+}
+
+model Client {
+  id         Int       @id @default(autoincrement())
+  name       String
+  email      String    @unique
+  password   String
+  phone      String    @unique
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+  contatos   Contact[]
+}
+
+model Contact {
+  id         Int       @id @default(autoincrement())
+  client_id  Int
+  name       String
+  email      String?
+  phone      String    @unique
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+  client     Client?   @relation(fields: [client_id], references: [id])
+}
