@@ -165,6 +165,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -174,7 +175,8 @@ const config = {
     }
   },
   "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL3NyYy9nZW5lcmF0ZWQvY2xpZW50Igp9CgpkYXRhc291cmNlIGRiIHsKICBwcm92aWRlciA9ICJwb3N0Z3Jlc3FsIgogIHVybCAgICAgID0gInBvc3RncmVzOi8vY3VubmVjdGh1Yl91c2VyOlhKbXpiaHJyNUR1aFBSMENKOVd1OVJ1VktnRmx2N1JpQGRwZy1jbXR1cDQwY21rNGM3MzkxZmRvMC1hLm9yZWdvbi1wb3N0Z3Jlcy5yZW5kZXIuY29tL2N1bm5lY3RodWIiCn0KCm1vZGVsIENsaWVudCB7CiAgaWQgICAgICAgICBJbnQgICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICBuYW1lICAgICAgIFN0cmluZwogIGVtYWlsICAgICAgU3RyaW5nICAgIEB1bmlxdWUKICBwYXNzd29yZCAgIFN0cmluZwogIHBob25lICAgICAgU3RyaW5nICAgIEB1bmlxdWUKICBjcmVhdGVkX2F0IERhdGVUaW1lICBAZGVmYXVsdChub3coKSkKICB1cGRhdGVkX2F0IERhdGVUaW1lPwogIGNvbnRhdG9zICAgQ29udGFjdFtdCn0KCm1vZGVsIENvbnRhY3QgewogIGlkICAgICAgICAgSW50ICAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgY2xpZW50X2lkICBJbnQKICBuYW1lICAgICAgIFN0cmluZwogIGVtYWlsICAgICAgU3RyaW5nPwogIHBob25lICAgICAgU3RyaW5nICAgIEB1bmlxdWUKICBjcmVhdGVkX2F0IERhdGVUaW1lICBAZGVmYXVsdChub3coKSkKICB1cGRhdGVkX2F0IERhdGVUaW1lPwogIGNsaWVudCAgICAgQ2xpZW50PyAgIEByZWxhdGlvbihmaWVsZHM6IFtjbGllbnRfaWRdLCByZWZlcmVuY2VzOiBbaWRdKQp9Cg==",
-  "inlineSchemaHash": "d4df7c7c35bc08b151bd03bfc139ff2f90106426245e33bed1cb8c7f8b2f9f08"
+  "inlineSchemaHash": "d4df7c7c35bc08b151bd03bfc139ff2f90106426245e33bed1cb8c7f8b2f9f08",
+  "noEngine": false
 }
 config.dirname = '/'
 
