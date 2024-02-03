@@ -88,7 +88,7 @@ export class ClientService {
             },
             data: {
                 ...body,
-                password: hashedPassword,
+                password: hashedPassword ?? undefined,
             },
         });
 

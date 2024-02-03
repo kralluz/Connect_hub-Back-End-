@@ -3256,7 +3256,7 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
+    id?: IntFieldUpdateOperationsInput | number | undefined
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
