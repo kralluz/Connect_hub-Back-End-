@@ -74,26 +74,27 @@ export class ClientService {
         return client;
     }
 
-    static async updateClient(
-        id: any,
-        body: ClientUpdate
-    ): Promise<ClientResponse> {
-        const hashedPassword = body.password
-            ? await bcrypt.hash(body.password, 10)
-            : undefined;
-
+    static async updateClient(id: any, body: ClientUpdate): Promise<ClientResponse> {
+        let updateData: any = {
+            ...body,
+        };
+    
+        if (body.password) {
+            const hashedPassword = await bcrypt.hash(body.password, 10);
+            updateData.password = hashedPassword;
+        } else {
+            delete updateData.password;
+        }
+    
         const updatedClient = await prisma.client.update({
             where: {
                 id: parseInt(id),
             },
-            data: {
-                ...body,
-                password: hashedPassword ?? undefined,
-            },
+            data: updateData,
         });
-
+    
         const { password, ...updatedClientWithoutPassword } = updatedClient;
-
+    
         await prisma.$disconnect();
         return updatedClientWithoutPassword;
     }
