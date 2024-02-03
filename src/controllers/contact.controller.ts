@@ -19,13 +19,10 @@ export class contactController {
         req: Request,
         res: Response<ContactResponse>
     ): Promise<any> {
-        const {
-            query: { contactId },
-        } = req;
         const token = req.headers.authorization;
         const clientId = extractId(token);
         const response = await ContactService.readAllContacts(clientId!);
-        res.status(200).json(response);
+        return res.status(200).json(response);
     }
 
     static async getContactById(

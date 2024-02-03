@@ -89,7 +89,7 @@ export const numberContactValidate = async (
     });
 
     if (existingPhone) {
-        res.status(409).json({ error: "Phone already exists." });
+        return res.status(409).json({ error: "Phone already exists." });
     }
 
     return next();
