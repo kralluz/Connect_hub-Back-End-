@@ -40,7 +40,7 @@ export const clientUpdateSchema = z.object({
     password: z.string().max(300).optional(),
     phone: z.string().refine(data => /^\d{8,15}$/.test(data), {
         message: 'Phone must be a string containing 8 to 15 digits.'
-    }),
+    }).optional(),
 });
 
 

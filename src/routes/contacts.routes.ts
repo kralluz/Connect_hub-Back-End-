@@ -23,7 +23,6 @@ contactsRoutes.get(
     "/:id",
     middlewares.verifyToken,
     middlewares.verifyContactId,
-    middlewares.verifyContactId,
     contactController.getContactById
 );
 
