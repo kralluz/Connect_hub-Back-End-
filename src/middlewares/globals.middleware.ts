@@ -137,7 +137,7 @@ export const emailValidate = async (
     });
 
     if (existingEmail) {
-        res.status(409).json({ error: "Email already exists." });
+        return res.status(409).json({ error: "Email already exists." });
     }
 
     return next();
