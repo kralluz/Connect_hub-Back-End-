@@ -35,14 +35,13 @@ export const clientResponseSchema = clientSchema.pick({
 export const clientReadAllSchema = clientResponseSchema.array();
 
 
-export const clientUpdateSchema = z.object({
+const clientUpdateSchema = z.object({
     name: z.string().max(45).optional(),
     password: z.string().max(300).optional(),
-    phone: z.string().refine(data => /^\d{8,15}$/.test(data), {
-        message: 'Phone must be a string containing 8 to 15 digits.'
-    }).optional(),
+    phone: z.string().optional().refine((data) => data === undefined || data === "" || /^\d{8,15}$/.test(data), {
+        message: 'Phone must be a string containing 8 to 15 digits, or be empty.'
+    }),
 });
-
 
 export const clientSessionSchema = clientSchema.pick({
     email: true,
