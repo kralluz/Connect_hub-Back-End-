@@ -35,7 +35,7 @@ export const clientResponseSchema = clientSchema.pick({
 export const clientReadAllSchema = clientResponseSchema.array();
 
 
-const clientUpdateSchema = z.object({
+export const clientUpdateSchema = z.object({
     name: z.string().max(45).optional(),
     password: z.string().max(300).optional(),
     phone: z.string().optional().refine((data) => data === undefined || data === "" || /^\d{8,15}$/.test(data), {
