@@ -5,4 +5,4 @@ import { clientSessionSchema } from "../schemas/client.schema";
 
 export const sessionRoutes = Router();
 
-sessionRoutes.post("/", middlewares.bodyValidation(clientSessionSchema), middlewares.emailValidate, SessionController);
+sessionRoutes.post("/", middlewares.bodyValidation(clientSessionSchema), middlewares.verifyExistEmail, SessionController);

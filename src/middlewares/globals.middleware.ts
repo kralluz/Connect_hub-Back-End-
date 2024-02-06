@@ -119,6 +119,30 @@ export const numberClientValidate = async (
     return next();
 };
 
+export const verifyExistEmail = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+) => {
+    const { email } = req.body;
+
+    if (!email) {
+        return next();
+    }
+
+    const existingEmail = await prisma.client.findUnique({
+        where: {
+            email: email,
+        },
+    });
+
+    if (!existingEmail) {
+        return res.status(404).json({ error: "Email not exists." });
+    }
+
+    return next();
+};
+
 export const emailValidate = async (
     req: Request,
     res: Response,
