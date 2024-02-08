@@ -1,38 +1,48 @@
 import "dotenv/config";
 import AppError from "../middlewares/errors";
 import { NextFunction, Request, Response } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { ZodTypeAny } from "zod";
 import { PrismaClient } from "../../prisma/src/generated/client";
 import { extractId } from "../services/session.service";
 import { verify } from "jsonwebtoken";
+import { ContactService } from "../services/contact.service";
 
 const prisma = new PrismaClient();
 
 export const bodyValidation =
     (schema: ZodTypeAny) =>
     (req: Request, res: Response, next: NextFunction): void => {
-        if(req.body.value) req.body.value = Number(req.body.value);
+        if (req.body.value) req.body.value = Number(req.body.value);
         req.body = schema.parse(req.body);
         return next();
     };
 
-    export const verifyToken = (
-        req: Request,
-        res: Response,
-        next: NextFunction
-    ) => {
-        const authorization = req.headers.authorization;
-        if (!authorization) {
-            return res.status(401).json({ error: "Missing bearer token" });
-        };
-    
-        const token: string = authorization.split(" ")[1];
-        const decoded = verify(token, process.env.JWT_SECRET_KEY!);
-    
-        res.locals = { ...res.locals, decoded };
-        return next();
-    };
+export const verifyToken = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+) => {
+    const authorization = req.headers.authorization;
+    if (!authorization) {
+        return res.status(401).json({ error: "Missing bearer token" });
+    }
+
+    if (!authorization.startsWith("Bearer")) {
+        return res.status(401).json({ error: "Invalid token" });
+    }
+
+    const token: string = authorization.split(" ")[1];
+    const decoded = verify(token, process.env.JWT_SECRET_KEY!) as JwtPayload;
+
+/*     const contact = await ContactService.getContactById(decoded.clientId, req.params.id);
+    if (!contact || decoded.clientId !== contact?.client_id) {
+        return res.status(403).json({ error: "Unauthorized" });
+    } */
+
+    res.locals = { ...res.locals, decoded };
+    return next();
+};
 
 export const verifyContactId = async (
     req: Request,
