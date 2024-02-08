@@ -1,6 +1,6 @@
 # ConnectHub - Back-end
 
-# Acesse a documentação oficial da API Connect Hub [aqui!](http://localhost:3000/doc/)
+# Acesse a documentação oficial da API Connect Hub [aqui!](https://connect-hub-back-end.onrender.com/doc/)
 ### A aplicação eve estar rodando localmente!
 
 ## Sobre o Projeto
@@ -32,3 +32,4 @@ npm run start
 bash
 Copy code
 O servidor estará ativo em `http://localhost:3000`.
+A documentação estará disponível localmente também em `http://localhost:3000/doc`.
