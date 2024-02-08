@@ -849,20 +849,6 @@
                                 }
                             }
                         }
-                    },
-                    "403": {
-                        "description": "Forbidden",
-                        "content": {
-                            "application/json": {
-                                "examples": {
-                                    "permissionError": {
-                                        "value": {
-                                            "message": "Insufficient Permissions"
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 },
                 "security": [
