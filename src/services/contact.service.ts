@@ -58,6 +58,7 @@ export class ContactService {
                 name: body.name,
                 email: body.email,
                 phone: body.phone,
+                updated_at: new Date().toISOString(),
             },
         });
         await prisma.$disconnect();

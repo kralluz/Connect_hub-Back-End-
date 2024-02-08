@@ -8,7 +8,7 @@ export const SessionController = async (
     const body = req.body;
     const response = await sessionService(body);
     if (response === null) {
-        return res.status(401).json({ message: "Invalid credentials" });
+        return res.status(401).json({ message: "Invalid credentials." });
     }
     return res.status(200).json(response);
 };
