@@ -14,7 +14,7 @@ ConnectHub é uma aplicação web que permite o cadastro e gerenciamento de clie
 Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 1. Clone o repositório:
-git clone <[URL_DO_REPOSITÓRIO_BACK-END](https://github.com/kralluz/Connect_hub-back-end-.git)>
+git clone https://github.com/kralluz/Connect_hub-back-end-.git
 
 csharp
 Copy code
