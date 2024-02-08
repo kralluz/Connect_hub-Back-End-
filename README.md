@@ -16,7 +16,6 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 1. Clone o repositório:
 git clone https://github.com/kralluz/Connect_hub-back-end-.git
 
-csharp
 Copy code
 2. Instale as dependências:
 cd connecthub-back-end
