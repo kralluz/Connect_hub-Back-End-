@@ -9,8 +9,7 @@ A API ConnectHub é uma api responsável pelo cadastro e gerenciamento de client
 Acesse a api remotamente e também consulte a documentação oficial da API Connect Hub [aqui!](https://connect-hub-back-end.onrender.com/doc/)
 
 ## Front-end
-O front-end da aplicação ConnectHub foi desenvolvido para oferecer uma interface intuitiva e responsiva para os usuários. Para mais detalhes sobre o front-end, acesse o repositório:
-- **Repositório Front-end:** [https://github.com/kralluz/Connect_hub-Front-End-.git](https://github.com/kralluz/Connect_hub-Front-End-.git)
+O front-end da aplicação ConnectHub foi desenvolvido para oferecer uma interface intuitiva e responsiva para os usuários. Para mais detalhes sobre o front-end, acesse o repositório [aqui!](https://github.com/kralluz/Connect_hub-Front-End-.git).
 
 ## Pré-requisitos
 - Node.js
