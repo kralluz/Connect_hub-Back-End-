@@ -14,6 +14,7 @@ Acesse a api remotamente e também consulte a documentação oficial da API Conn
 
 ## Front-end
 O front-end da aplicação ConnectHub foi desenvolvido para oferecer uma interface intuitiva e responsiva para os usuários. Para mais detalhes sobre o front-end, acesse o link do repositório abaixo
+
 [Repositório Front-End](https://github.com/kralluz/Connect_hub-Front-End-.git).
 
 ## Pré-requisitos
