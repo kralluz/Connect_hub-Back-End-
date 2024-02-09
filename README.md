@@ -6,7 +6,7 @@ Este repositório faz parte do projeto ConnectHub, uma aplicação full stack pa
 ## Sobre o Projeto
 A API ConnectHub é uma api responsável pelo cadastro e gerenciamento de clientes e seus contatos. Este repositório é dedicado ao back-end da aplicação, desenvolvido com [Node.js](https://nodejs.org/) e [Express](https://expressjs.com/) e [Prisma](https://www.prisma.io/).
 
-Acesse a a api remotamente e também consulte a documentação oficial da API Connect Hub [aqui!](https://connect-hub-back-end.onrender.com/doc/)
+Acesse a api remotamente e também consulte a documentação oficial da API Connect Hub [aqui!](https://connect-hub-back-end.onrender.com/doc/)
 
 ## Front-end
 O front-end da aplicação ConnectHub foi desenvolvido para oferecer uma interface intuitiva e responsiva para os usuários. Para mais detalhes sobre o front-end, acesse o repositório e a documentação:
