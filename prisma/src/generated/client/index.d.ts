@@ -3184,17 +3184,17 @@ export namespace Prisma {
 
   export type ContactWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    phone?: string
     AND?: ContactWhereInput | ContactWhereInput[]
     OR?: ContactWhereInput[]
     NOT?: ContactWhereInput | ContactWhereInput[]
     client_id?: IntFilter<"Contact"> | number
     name?: StringFilter<"Contact"> | string
     email?: StringNullableFilter<"Contact"> | string | null
+    phone?: StringFilter<"Contact"> | string
     created_at?: DateTimeFilter<"Contact"> | Date | string
     updated_at?: DateTimeNullableFilter<"Contact"> | Date | string | null
     client?: XOR<ClientNullableRelationFilter, ClientWhereInput> | null
-  }, "id" | "phone">
+  }, "id">
 
   export type ContactOrderByWithAggregationInput = {
     id?: SortOrder
@@ -3256,7 +3256,7 @@ export namespace Prisma {
   }
 
   export type ClientUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number | undefined
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string

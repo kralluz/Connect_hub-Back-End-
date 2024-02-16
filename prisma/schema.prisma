@@ -24,7 +24,7 @@ model Contact {
   client_id  Int
   name       String
   email      String?
-  phone      String    @unique
+  phone      String   
   created_at DateTime  @default(now())
   updated_at DateTime?
   client     Client?   @relation(fields: [client_id], references: [id])
