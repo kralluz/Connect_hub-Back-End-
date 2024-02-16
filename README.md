@@ -36,7 +36,7 @@ npm install
 ```
 3. Gerare o cliente Prisma:
 ```bash
-npx prisma generate
+npx prisma migrate dev
 ```
 
 ## Executando o Projeto

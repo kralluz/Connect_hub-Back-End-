@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://cunnecthub_user:XJmzbhrr5DuhPR0CJ9Wu9RuVKgFlv7Ri@dpg-cmtup40cmk4c7391fdo0-a.oregon-postgres.render.com/cunnecthub"
+  url      = env("DATABASE_URL")
 }
 
 model Client {
