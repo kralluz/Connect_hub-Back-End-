@@ -33,8 +33,6 @@ git clone https://github.com/kralluz/Connect_hub-back-end-.git
 ```bash
 cd connecthub-back-end
 npm install
-# Gerar o cliente Prisma
-npx prisma generate
 ```
 3. Gerare o cliente Prisma:
 ```bash
