@@ -4,7 +4,7 @@ set -o errexit
 npm install
 npm install @types/express @types/cors @types/jsonwebtoken @types/bcryptjs @types/node --save-dev
 
-npm build
+npm run build
 
 # Gerar o cliente Prisma
 npx prisma generate
