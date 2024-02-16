@@ -9,7 +9,7 @@ contactsRoutes.post(
     "/",
     middlewares.verifyToken,
     middlewares.bodyValidation(contactCreateSchema),
-    middlewares.numberContactValidate,
+/*     middlewares.numberContactValidate, */
     contactController.createContact
 );
 

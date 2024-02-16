@@ -85,7 +85,7 @@ export const verifyClientId = async (
     next();
 };
 
-export const numberContactValidate = async (
+/* export const numberContactValidate = async (
     req: Request,
     res: Response,
     next: NextFunction
@@ -103,7 +103,7 @@ export const numberContactValidate = async (
     }
 
     return next();
-};
+}; */
 
 export const numberClientValidate = async (
     req: Request,
