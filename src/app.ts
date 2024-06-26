@@ -9,13 +9,8 @@ const swaggerDocument = require("../swagger_output.json");
 
 export const app = express();
 
-// Configuração do CORS
-const corsOptions = {
-  origin: 'https://connect-hub-front-end.vercel.app',
-  optionsSuccessStatus: 200 // Algumas versões do navegador exigem isso para compatibilidade
-};
-
-app.use(cors(corsOptions));
+// Configuração do CORS para permitir todas as origens
+app.use(cors());
 app.use(express.json());
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
